@@ -4,10 +4,10 @@ const theme = extendTheme({
     styles: { 
       global: {
         body: {
-          border:"1px solid black",
+
+
           bg: 'white', // Set background color to white
-          
-        },
+        }
       },
     },
   });

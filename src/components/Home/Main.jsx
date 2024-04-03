@@ -25,8 +25,9 @@ import {
   TriangleDownIcon,
   TriangleUpIcon,
 } from "@chakra-ui/icons";
+import { NavLink } from "react-router-dom";
 
-function Card() {
+function Main() {
   return (
     <Box margin="auto" display="flex" flexWrap="wrap" w="100%" maxW="1200px">
       {/* Product Boxes */}
@@ -139,7 +140,6 @@ function Card() {
             </Flex>
           </Box>
         </Box>
-
       </Box>
       {/* Sidebar */}
       <Box
@@ -191,11 +191,20 @@ function Card() {
           <Text>$377.99</Text>
         </Flex>
         <Button w="full" colorScheme="blue">
-          Checkout
+        {/* <NavLink to="/Checkout" textDecoration={'none'} > Checkout</NavLink>    */}
+        <NavLink
+                                to="/Checkout"
+                                    className={({isActive }) =>
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text--700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                >
+                                    Checkout
+                                </NavLink>
         </Button>
+        
       </Box>
     </Box>
   );
 }
 
-export default Card;
+export default Main;
